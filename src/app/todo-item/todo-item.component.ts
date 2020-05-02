@@ -5,7 +5,8 @@ import { TodoItem } from '../interfaces/todo-item';
   selector: 'app-todo-item',
   template: `
     <div class="todo-item">
-      <input type="checkbox" class="todo-checkbox" (click)="completeItem()"/>
+      <input type="checkbox" class="todo-checkbox" (click)="completeItem()"
+              [checked]="item.completed"/>
       <span class="todo-title" [ngClass]="{'todo-complete': item.completed}">
         {{ item.title }}
       </span>
